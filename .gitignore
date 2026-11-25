@@ -1,0 +1,37 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# Toàn bộ data/ bị ignore, không liệt kê từng thư mục con: processed_anilist_b,
+# processed_gr, processed_hgn_none... sinh ra sau này đều phải bị chặn tự động,
+# không phải nhớ thêm dòng mới mỗi lần có thư mục processed_* mới. Bốn thư mục
+# gốc được mở lại CHỈ để giữ .gitkeep (git không nhìn vào thư mục con của một
+# thư mục đã bị ignore, nên phải mở thư mục trước rồi mới ignore nội dung).
+data/*
+!data/raw/
+data/raw/*
+!data/raw/.gitkeep
+!data/interim/
+data/interim/*
+!data/interim/.gitkeep
+!data/processed/
+data/processed/*
+!data/processed/.gitkeep
+!data/external/
+data/external/*
+!data/external/.gitkeep
+
+*.pkl
+*.bin
+*.ckpt
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Tệp rỗng sinh ra do một lệnh shell ghi nhầm tên (dấu phẩy là một phần tên
+# tệp); không xoá tự động, chỉ không theo dõi.
+/học,

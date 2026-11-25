@@ -1,0 +1,15 @@
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+
+model:
+  top_k: 10
+  hybrid:
+    weight_content: 0.5
+    weight_collaborative: 0.5
+  cold_start:
+    strategy: popularity_plus_genre
+
+evaluation:
+  metrics: [precision_at_k, recall_at_k, ndcg_at_k, coverage]
+  test_split: 0.2
